@@ -5,12 +5,12 @@
 			<!-- <?php print_r($listbuku); ?> -->
 			<div class="card">
 				<div class="card-header">
-					Daftar Buku
+					<h5>Daftar Buku</h5>
 				</div>
 				<div class="card-body">
 					<!-- Membuat pencarian buku -->
 					<div class="input-group mb-3">
-						<form action="Welcome" method="GET">
+						<form action="Home" method="GET">
 							<div class="input-group">
 								<input type="text" class="form-control" aria-label="Keyword" name="keyword" placeholder="Masukkan nama buku" aria-describedby="button-addon2">
 								<button class="btn btn-outline-secondary" type="submit">Cari</button>

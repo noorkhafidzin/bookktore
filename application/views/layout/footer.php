@@ -1,7 +1,7 @@
 </body>
 <footer class="text-center text-lg-start bg-primary fixed-bottom">
     <div class="text-center p-2 text-light">
-        © 2022 Copyright:
+        Copyright © <?php echo date('Y'); ?>.
         <a class="text-reset fw-bold" href="<?= base_url('/') ?>">BDIBOOKSTORE</a>
     </div>
 </footer>
