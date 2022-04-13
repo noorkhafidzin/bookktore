@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <h1 class="card-header">Tambah Buku:</h1>
+                <h1 class="card-header">Tambah Penerbit:</h1>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-10 mx-auto">

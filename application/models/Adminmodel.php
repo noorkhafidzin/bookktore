@@ -106,4 +106,22 @@ class Adminmodel extends CI_Model
         $this->db->where('id_penerbit', $id);
         $this->db->delete('penerbit');
     }
+
+    // ^ mengambil data di database buku dengan stok paling sedikit
+    function get_pengadaan_buku()
+    {
+        return $this->db->query('select * from buku where stok = (select min(stok) from buku);')->result();
+        // return $this->db->get('buku')->result();
+    }
+
+    // ^ mengambil data di database buku dengan stok paling sedikit
+    function get_new_buku()
+    {
+        return $this->db->query('select * from buku, penerbit where buku.penerbit = penerbit.nama group by id_buku;')->result();
+    }
+
+    function get_nama_penerbit()
+    {
+        return $this->db->query('select nama from penerbit;')->result();
+    }
 }

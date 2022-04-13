@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <h1 class="card-header">Tambah Buku:</h1>
+                <h1 class="card-header">Edit Buku:</h1>
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-10 mx-auto">
@@ -26,7 +26,12 @@
                                 <label for="stok">Stok:</label>
                                 <input type="number" name="stok" id="stok" class="form-control" value="<?= $listbuku['stok'] ?>">
                                 <label for="penerbit">Penerbit:</label>
-                                <input type="text" name="penerbit" id="penerbit" class="form-control" value="<?= $listbuku['penerbit'] ?>">
+                                <select class="form-select" aria-label="Default select example" name="penerbit">
+                                    <option selected>Pilih Penerbit</option>
+                                    <?php foreach ($listpenerbit as $p) {
+                                        echo '<option value="' . $p->nama . '">' . $p->nama . '</option>';
+                                    } ?>
+                                </select>
                                 <button type="submit" class="btn btn-primary mt-3">Simpan</button>
                             </form>
                         </div>

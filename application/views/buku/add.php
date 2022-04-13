@@ -24,7 +24,12 @@
                                 <label for="stok">Stok:</label>
                                 <input type="number" name="stok" id="stok" class="form-control">
                                 <label for="penerbit">Penerbit:</label>
-                                <input type="text" name="penerbit" id="penerbit" class="form-control">
+                                <select class="form-select" aria-label="Default select example" name="penerbit">
+                                    <option selected>Pilih Penerbit</option>
+                                    <?php foreach ($listpenerbit as $p) {
+                                        echo '<option value="' . $p->nama . '">' . $p->nama . '</option>';
+                                    } ?>
+                                </select>
                                 <button type="submit" class="btn btn-primary mt-3">Simpan</button>
                             </form>
                         </div>

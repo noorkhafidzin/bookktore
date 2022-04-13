@@ -29,6 +29,7 @@
                                 <th>Harga</th>
                                 <th>Stok</th>
                                 <th>Penerbit</th>
+                                <th>Telepon</th>
                                 <th>Aksi</th>
                             </tr>
                             <!-- Menampilkan array $listbuku -->
@@ -41,6 +42,7 @@
                                     <td><?php echo $b->harga; ?></td>
                                     <td><?php echo $b->stok; ?></td>
                                     <td><?php echo $b->penerbit; ?></td>
+                                    <td><?php echo $b->telepon; ?></td>
                                     <td>
                                         <a href="Admin/edit_buku/<?php echo $b->id_buku; ?>" class="btn btn-warning ml-1 mt-1">Edit</a>
                                         <a href="Admin/delete_buku/<?php echo $b->id_buku; ?>" onclick="return confirm('Apakah Anda yakin menghapus buku ini?')" class="btn btn-danger ml-1 mt-1">Hapus</a>

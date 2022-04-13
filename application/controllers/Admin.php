@@ -13,7 +13,7 @@ class Admin extends CI_Controller
     public function index()
     {
         // ^ mendefinisikan variabel dari tabel buku
-        $data['listbuku'] = $this->adminmodel->get_buku();
+        $data['listbuku'] = $this->adminmodel->get_new_buku();
         // ^ mendefinisikan variabel dari tabel penerbit
         $data['listpenerbit'] = $this->adminmodel->get_penerbit();
         // ^ membuat judul halaman
@@ -29,12 +29,13 @@ class Admin extends CI_Controller
     // ^membuat fungsi untuk menampilkan halaman add buku
     public function add_buku()
     {
+        $data['listpenerbit'] = $this->adminmodel->get_nama_penerbit();
         // ^ membuat judul halaman
         $data['judulhlm'] = 'Tambah Buku | BDIBOOKSTORE';
         // ^ load header
         $this->load->view('layout/header', $data);
         // ^ load halaman add buku
-        $this->load->view('buku/add');
+        $this->load->view('buku/add', $data);
         // ^ load footer
         $this->load->view('layout/footer');
     }
@@ -81,6 +82,7 @@ class Admin extends CI_Controller
     // ^membuat fungsi untuk menampilkan halaman edit buku
     public function edit_buku($id = null)
     {
+        $data['listpenerbit'] = $this->adminmodel->get_nama_penerbit();
         // ^ mendefinisikan variabel dari tabel buku
         $data['listbuku'] = $this->adminmodel->get_detail_buku($id);
         // ^ membuat judul halaman
